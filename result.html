@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Results</title>
+</head>
+<body>
+    <h1>Devices Found</h1>
+    <ul>
+        {% for device in devices %}
+        <li>
+            IP: {{ device.ip }} - Hostname: {{ device.hostname }} - State: {{ device.state }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
